@@ -1,57 +1,55 @@
 public class Main {
     public static void main(String[] args) {
-        for (int i = 1; i <= 10; i++) {
-            System.out.println(i);
+        int targetAmount = 2459000;
+        int monthlyDeposit = 15000;
+        int currentSavings = 0;
+        int monthsCount = 0;
+        while (currentSavings < targetAmount) {
+            currentSavings += monthlyDeposit;
+            monthsCount += 1;
         }
+        System.out.println("Месяц " + monthsCount + ", сумма накоплений равна " + currentSavings + " рублей");
 
-        for (int a = 10; a >= 1; a--) {
-            System.out.println(a);
+        int counter = 1;
+        while (counter <= 10) {
+            System.out.print(counter + " ");
+            counter++;
         }
-
-        for (int z = 0; z <= 17; z += 2) {
-            System.out.println(z);
-        }
-
-        for (int y = 10; y >= -10; y--) {
-            System.out.println(y);
-        }
-
-        for (int year = 1904; year <= 2096; year += 4) {
-            System.out.println(year + " год является високосным");
-        }
-
-        for (int i = 7; i <= 98; i += 7) {
-            System.out.print(i + " ");
-        }
-
-
-        int number = 1;
-        while (number <= 512) {
+        System.out.println();
+        for (int number = 10; number >= 1; number--) {
             System.out.print(number + " ");
-            number *= 2;
+        }
+        System.out.println();
+
+        int citizens = 12000000;
+        int birthFactor = 17;
+        int deathFactor = 8;
+        for (int currentYear = 1; currentYear <= 10; currentYear++) {
+            int newborns = (citizens * birthFactor) / 1000;
+            int deceased = (citizens * deathFactor) / 1000;
+            citizens += newborns - deceased;
+            System.out.println("Год " + currentYear + ", численность населения составляет " + citizens);
         }
 
-        int monthlyDeposit = 29000;
-        int totalSavings = 0;
-        for (int month = 1; month <= 12; month++) {
-            totalSavings += monthlyDeposit;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + totalSavings + " рублей");
+        int initialFriday = 5;
+        int monthLength = 31;
+        for (int currentDay = initialFriday; currentDay <= monthLength; currentDay += 7) {
+            System.out.println("Сегодня пятница, " + currentDay + "-е число. Необходимо подготовить отчет.");
         }
 
-        int monthlyContribution = 29000;
-        double balance = 0;
-
-
-        for (int month = 1; month <= 12; month++) {
-            balance += monthlyContribution;
-            balance += monthlyContribution * 0.01;
-            System.out.println("Месяц " + month + ", сумма накоплений равна " + String.format("%.2f", balance) + " рублей");
+        int referenceYear = 2025;
+        int pastLimit = referenceYear - 200;
+        int futureLimit = referenceYear + 100;
+        for (int pastYear = pastLimit; pastYear <= referenceYear; pastYear++) {
+            if (pastYear % 79 == 0) {
+                System.out.println(pastYear);
+            }
         }
-
-        for (int i = 1; i <= 10; i++) {
-            System.out.println("2 * " + i + " = " + (2 * i));
+        for (int futureYear = referenceYear; futureYear <= futureLimit; futureYear++) {
+            if (futureYear % 79 == 0) {
+                System.out.println(futureYear);
+                break;
+            }
         }
-
-
     }
 }
